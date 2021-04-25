@@ -1,0 +1,15 @@
+old/
+mapping_sim*
+bleties_ont/
+bleties_pb/
+sim_hiseq_pe/
+sim_ont/
+sim_pb_ccs/
+sim_pb_clr/
+envs/
+ref/
+plots/
+opt/
+*log*
+*.swp
+.ipynb_checkpoints/
