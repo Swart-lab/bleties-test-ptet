@@ -34,7 +34,7 @@ case "$1" in
     opt/faFilter -minSize=100000 -maxN=100 ref/ptetraurelia_mac_51_with_ies.fa ref/ptetraurelia_mac_51_with_ies.min100k_max100N.fa
     # Find corresponding contigs in the MAC-only assembly
     grep '>' ref/ptetraurelia_mac_51_with_ies.min100k_max100N.fa | sed 's/>//' | sed 's/_with_IES//' > ref/ctg_list
-    opt/faSomeRecords ref/ptetraurelia_mac_51_with_ies.min100k_max100N.fa ref/ctg_list ref/ptetraurelia_mac_51.min100k_max100N.fa
+    opt/faSomeRecords ref/ptetraurelia_mac_51.fa ref/ctg_list ref/ptetraurelia_mac_51.min100k_max100N.fa
     ;;
 
   "sim_pb_clr")
@@ -65,6 +65,7 @@ case "$1" in
     # Combine and gzip
     cat sim_pb_clr/ptet_mac_ies_sim_clr_*.fastq | gzip > sim_pb_clr/ptet_mac_ies_sim_clr.fq.gz
     cat sim_pb_clr/ptet_mac_sim_clr_*.fastq | gzip > sim_pb_clr/ptet_mac_sim_clr.fq.gz
+    ;;
 
   "mix_sim_pb_clr_reads")
     # downsample, rename, and combine reads
@@ -88,7 +89,7 @@ case "$1" in
     ln --relative -s sim_pb_clr/ptet_mac_sim_clr.fq.gz sim_pb_clr/ptet_sim_clr.mix00.fq.gz
     ;;
 
-  "sim_ont"
+  "sim_ont")
     # MAC reads
     opt/pbsim2/bin/pbsim \
       --prefix sim_ont/ptet_mac_sim_ontR95 \
