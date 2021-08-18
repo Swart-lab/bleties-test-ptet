@@ -4,6 +4,10 @@ Benchmarking BleTIES with simulated reads from Paramecium
 Source data and setup
 ---------------------
 
+This repository supplements our
+[preprint](https://www.biorxiv.org/content/10.1101/2021.05.18.444610v1)
+describing the [BleTIES](https://github.com/Swart-lab/bleties) software.
+
 MAC and MAC+IES assemblies (both v1) from Paramecium tetraurelia strain 51,
 obtained from [ParameciumDB](https://paramecium.i2bc.paris-saclay.fr)
 
